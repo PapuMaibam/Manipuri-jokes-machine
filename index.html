@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipuri Joke Machine</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-top: 50px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .joke-box {
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
+      margin: 40px auto;
+      border-radius: 20px;
+      width: 60%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      font-size: 1.5rem;
+    }
+
+    button {
+      background: yellow;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      cursor: pointer;
+      color: #333;
+      font-weight: bold;
+      box-shadow: 0 5px #999;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: orange;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .emoji {
+      font-size: 3rem;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-20px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>😂 Manipuri Joke Machine 😂</h1>
+  <div class="joke-box">
+    <p id="joke">Click the button for the manipuri joke!</p>
+    <button onclick="tellJoke()">Tell Me a Joke!</button>
+    <div class="emoji">🤣</div>
+  </div>
+  <footer>
+    © 2025 World's Worst Joke Machine
+  </footer>
+
+  <script>
+    const jokes = [
+      "Tomba: ngacdi ei ngnda wa ama hange.Chaoba: hangbyu oja yani.Tomba: handsome gi opposite ti karino?Chaoba: oja adudi legsome ne.",
+      "Tomba na macha nupa da ebungo kiba yade naringjen leigdbni ng nongsa gi macha ni.Macha nupa: hoi baba! class ta su eikhoi ojha na eise sagi macha soidana oirmgani hai...Tomba: hah.!!",
+      "Tomba amadi chaoba english ki home-work twrktabei english ojha na makhoi ani bu U(tree) da yanbagi punishmnt pirami..Ngaihak ki matung da tomba U dei pudrup laona tarak ae..Eng ojha: keidwre waraba??Tomba: natte ojha mulle.",
+      "Tomba U(tree) amgi mathak kakhtpda U da phmlmba yong ama na....Yong: karigi kark e-no.??Tomba: sem(apple) chaba.!!Yong: ado c d sem panbi natte heinou panbi ne.Tomba: khange! Sem eina porak a.!!",
+      "Tombi: tamo phi se nungsa da amta fwrmo.Tomba: nungsa da keigno.??Tombi:nungsa da fwra d thuna kangni aduine.!Ngaihak ki matung da:-Tombi: tamo nungsa da lep leiri do keigno.??Tomba:nungsa da humang knghaline...!!",
+    ];
+
+    function tellJoke() {
+      const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+      document.getElementById("joke").textContent = randomJoke;
+    }
+  </script>
+</body>
+</html>
